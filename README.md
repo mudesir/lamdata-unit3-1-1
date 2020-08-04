@@ -1,18 +1,18 @@
 # lamdata-unit3-1-1
 ## Installation
-
-TODO
-
-## Usage
-
-TODO
-
-```py
-# todo
+```
+pip install
 ```
 
 
-<hr>
-This is a list:
-    + item 1
-    + item 2
+## Usage
+
+
+
+```py
+from my_lamdata.mymod import enlarge
+
+print(enlarge(8))
+```
+
+
