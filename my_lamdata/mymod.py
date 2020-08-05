@@ -6,8 +6,8 @@ def enlarge(n):
     Parma n is a number (either float or integer is OK)
     Function will enlarge the number
     """
-    return n*100
-# this code breaks our ablity to import enlarge from other files, 
+    return n * 100
+# this code breaks our ablity to import enlarge from other files,
 #
 
 
@@ -15,4 +15,3 @@ if __name__ == "__main__":
     print("Hello")
 y = int(input("please choose a number"))
 print(y, enlarge(y))
-

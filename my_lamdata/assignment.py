@@ -1,8 +1,9 @@
 # my_lamdata/assignment.py
 from pandas import DataFrame
 
-# TODO: helper function from assignment
-# State abbreviation -> Full Name and visa versa. FL -> Florida, etc. (Handle Washington DC and territories like Puerto Rico etc.)
+# helper function from assignment
+# State abbreviation -> Full Name and visa versa. FL -> Florida, etc.
+# (Handle Washington DC and territories like Puerto Rico etc.)
 
 
 def add_state_names_column(my_df):
@@ -17,18 +18,15 @@ def add_state_names_column(my_df):
     an extra column.
     """
     new_df = my_df.copy()
-
-    names_map = {"CA": "California", "CO": "Collorado", 
-    "CT": "Connecticut", "DC": "District of Columbia", "TX": "Texas"}
-
+    names_map = {"CA": "California", "CO": "Collorado",
+                 "CT": "Connecticut", "DC": "District of Columbia",
+                 "TX": "Texas"}
     new_df["name"] = new_df["abbrev"].map(names_map)
-
     return new_df
 
 
 if __name__ == "__main__":
     df = DataFrame({"abbrev": ["CA", "CO", "CT", "DC", "TX"]})
     print(df.head())
-
     mapped_df = add_state_names_column(df)
     print(mapped_df.head())
