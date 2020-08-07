@@ -1,0 +1,15 @@
+FROM python3
+
+### So logging/io works reliably w/Docker
+ENV PYTHONUNBUFFERED=1
+
+RUN apt-get update && \
+  apt-get upgrade -y && \
+  pip install --upgrade pip
+
+RUN pip install
+
+RUN pip install -i https://test.pypi.org/project/lamdata-unit3-1-1
+
+ COPY README.md /tmp/requirements.txt
+ 
