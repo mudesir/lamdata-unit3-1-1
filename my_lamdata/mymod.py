@@ -13,5 +13,5 @@ def enlarge(n):
 
 if __name__ == "__main__":
     print("Hello")
-y = int(input("please choose a number"))
-print(y, enlarge(y))
+    y = int(input("please choose a number"))
+    print(y, enlarge(y))
